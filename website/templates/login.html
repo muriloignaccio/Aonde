@@ -2,9 +2,10 @@
 <h1>Para continuar, faça login no Aonde.</h1>
 <a href="">Entrar com facebook</a>
 <h2>ou</h2>
-<form method="POST">
+{{msg}}
+<form action="/login" method="POST">
     {% csrf_token %}
-    <input type="email" name="email" required>
+    <input type="email" name="email" placeholder="digite seu email" required>
     <input type="password" name="senha" required>
     <input type="checkbox" name="lembrar">Lembrar de mim
     <input type="submit" value="entrar">
