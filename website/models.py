@@ -23,16 +23,17 @@ class Pessoa(models.Model):
         max_length = 32,
         verbose_name = 'Nome'
     )
-    data_nascimento = models.DateField()
+    data_nascimento = models.DateField(
+        null = True
+    )
     cep = models.TextField(max_length = 9)
     genero = models.CharField(
+        max_length= 13,
         verbose_name='gender',
         choices=GENEROS
     )
 
-
-
     def __str__(self):
-        return self.email
+        return self.nome
 # class UserForm(forms.Form):
 #     birth_date= forms.DateField(label='What is your birth date?', widget=forms.SelectDateWidget)
