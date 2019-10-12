@@ -1,7 +1,9 @@
 {% block content %}
 <form method="POST">
+    {{aviso}}
+    {% csrf_token %}
     <input type="text" name="nome" placeholder="Digite seu nome">
-    <input type="email" placeholder="Digite seu email">
+    <input type="email" name="email" placeholder="Digite seu email">
     <input type="password" name="senha" placeholder="Digite sua senha">
     <input type="date" name="nascimento">
     <input type="text" name="cep" pattern="[0-9]*" placeholder="Digite seu CEP">
