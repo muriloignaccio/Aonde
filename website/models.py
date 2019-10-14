@@ -35,5 +35,14 @@ class Pessoa(models.Model):
 
     def __str__(self):
         return self.nome
-# class UserForm(forms.Form):
-#     birth_date= forms.DateField(label='What is your birth date?', widget=forms.SelectDateWidget)
+
+class Item_perdido(models.Model):
+    descricao = models.TextField()
+    local = models.TextField()
+    data = models.DateField(
+        null = True
+        )
+    tags = models.TextField()
+    
+    def __str__(self):
+        return self.local
