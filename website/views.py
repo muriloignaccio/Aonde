@@ -44,3 +44,6 @@ def cadastro(request):
         return render(request, 'cadastro.html', args)
 
     return render(request, 'cadastro.html')
+
+def aonde(request):
+    return render(request, 'aonde.html')
