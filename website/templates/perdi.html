@@ -1,0 +1,22 @@
+{% block content %}
+<div>
+    <form action="" method="POST">
+            {% csrf_token %}
+            <label>Descreva como você perdeu o item. Exemplo: Perdi meu livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
+            <textarea name='descricaoPerdeu' placeholder='Descreva aqui...' cols="30" rows="10"></textarea>
+            <label>Local:</label>
+            <input name="localPerdeu" placeholder="Local em que foi perdido...">
+            <label>Data:</label>
+            <input type="date" name="dataPerdeu">
+            <label>Descreva, usando tags, o item perdido. Exemplo: #livro #harrypotter #novo </label>
+            <input type="text" name='tagsPerdeu' placeholder='Descreva aqui...'>
+            <input type="submit" value="Enviar">
+    </form>
+</div>
+<div class='caixa'>
+    <p>
+        <h2>Entraremos em contato!</h2>
+        <h3>Obrigado por confiar no Aonde. ;)</h3>
+    </p>
+</div>
+{% endblock %}
