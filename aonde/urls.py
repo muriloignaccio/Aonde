@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.index),
     path('login', views.login),
     path('cadastro/', views.cadastro),
-    path ('aonde', views.aonde)
+    path ('aonde', views.aonde),
+    path ('perdi', views.perdi)
 ]
