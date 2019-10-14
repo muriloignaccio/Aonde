@@ -46,3 +46,14 @@ class Item_perdido(models.Model):
     
     def __str__(self):
         return self.local
+
+class Item_achado(models.Model):
+    descricao = models.TextField()
+    local = models.TextField()
+    data = models.DateField(
+        null = True
+        )
+    tags = models.TextField()
+    
+    def __str__(self):
+        return self.local
