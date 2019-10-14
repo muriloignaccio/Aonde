@@ -59,3 +59,15 @@ def perdi (request):
 
         return render (request, 'perdi.html')
     return render(request, 'perdi.html')
+
+def achei (request):
+    if request.method == 'POST':
+        dados = Item_achado()
+        dados.descricao = request.POST['descricaoAchou']
+        dados.local = request.POST['localAchou']
+        dados.data = request.POST['dataAchou']
+        dados.tags = request.POST['tagsAchou']
+        dados.save()
+
+        return render (request, 'achei.html')
+    return render(request, 'achei.html')
