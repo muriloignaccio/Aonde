@@ -47,3 +47,15 @@ def cadastro(request):
 
 def aonde(request):
     return render(request, 'aonde.html')
+
+def perdi (request):
+    if request.method == 'POST':
+        dados = Item_perdido()
+        dados.descricao = request.POST['descricaoPerdeu']
+        dados.local = request.POST['localPerdeu']
+        dados.data = request.POST['dataPerdeu']
+        dados.tags = request.POST['tagsPerdeu']
+        dados.save()
+
+        return render (request, 'perdi.html')
+    return render(request, 'perdi.html')
