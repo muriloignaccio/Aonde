@@ -37,10 +37,14 @@ class Pessoa(models.Model):
         return self.nome
 
 class Item_perdido(models.Model):
-    descricao = models.TextField()
-    local = models.TextField()
     data = models.DateField(
         null = True
+        )
+    descricao = models.TextField()
+    local = models.TextField()
+    pessoa = models.ForeignKey(
+        "Pessoa",
+        on_delete = models.CASCADE
         )
     tags = models.TextField()
     
@@ -48,10 +52,14 @@ class Item_perdido(models.Model):
         return self.local
 
 class Item_achado(models.Model):
-    descricao = models.TextField()
-    local = models.TextField()
     data = models.DateField(
         null = True
+        )
+    descricao = models.TextField()
+    local = models.TextField()
+    pessoa = models.ForeignKey(
+        "Pessoa",
+        on_delete = models.CASCADE
         )
     tags = models.TextField()
     
