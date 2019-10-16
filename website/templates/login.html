@@ -1,17 +1,40 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+href="{% static 'css/login.css' %}"
+{% endblock %}
+
 {% block content %}
-<h1>Para continuar, faça login no Aonde.</h1>
-<a href="">Entrar com facebook</a>
-<h2>ou</h2>
-{{msg}}
-<form action="/login" method="POST">
+
+<nav>
+    <a href="#">Quarta</a>
+    <a href="#">feira</a>
+</nav>
+
+<div class="header">
+    <h1>Para continuar, faça login no Aonde.</h1>
+</div>
+
+<div class="login">
+    <a href="">Entrar com facebook</a>
+    <h2>ou</h2>
+    {{msg}}
+    <form action="/login" method="POST">
     {% csrf_token %}
+    <div class='email'>
     <input type="email" name="email" placeholder="digite seu email" required>
-    <input type="password" name="senha" required>
-    <input type="checkbox" name="lembrar">Lembrar de mim
+    <input type="password" name="senha" placeholder='digite sua senha' required>
+    </div>
+   <input type="checkbox" name="lembrar">Lembrar de mim
+   <div class='entrar'>
     <input type="submit" value="entrar">
+    </div>
 </form>
 <a href="">Esqueceu sua senha?</a>
 <h3>Não tem uma conta?</h3>
 <a href="/cadastro">Inscrever-se no aonde</a>
+</div>
+
+
 {% endblock %}
