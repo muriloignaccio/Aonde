@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+href="{% static 'css/cadastro.css' %}"
+{% endblock %}
+
 {% block content %}
 <form method="POST">
     {{aviso}}
