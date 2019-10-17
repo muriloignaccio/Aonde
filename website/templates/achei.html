@@ -1,4 +1,13 @@
-{% block content%}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+href="{% static 'css/achei.css' %}"
+{% endblock %}
+
+{% block content %}
+
+
 <div>
         <form action="" method="POST">
         {% csrf_token %}

@@ -1,12 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+href="{% static 'css/aonde.css' %}"
+{% endblock %}
+
 {% block content %}
 
-<div>
-    <button>
-            Eu perdi
-    </button>
-    <button>
-            Eu achei
-    </button>
-</div>
 
+<nav>
+        <a href="#">quarta</a>
+        <a href="#">feira</a>
+</nav>
+        
+<div class="botao">
+        <button class="direita">
+                Eu perdi
+        </button>
+        <button class="esquerda">
+                Eu achei
+        </button>
+</div>
+        
 {% endblock %}
