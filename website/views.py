@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from website.models import *
 
 # Create your views here.
@@ -7,36 +7,26 @@ def index(request):
 
 def login(request):
     if request.method == 'POST':
-        formulario_email = request.POST['email']
-        formulario_senha = request.POST['senha']
-        print(formulario_email)
-        print(formulario_senha)
-
-        usuario_logado = Pessoa.objects.filter(email = formulario_email, 
-                                               password = formulario_senha).first()
-        
-        if usuario_logado is not None:
-            args = {
-                'msg': usuario_logado
-            }
-            return render(request, 'index.html', args)
+        usuario = Pessoa.objects.get(email = request.POST['email'])
+        request.session['nome'] = usuario.nome
+        if usuario.password == request.POST['senha']:
+            return redirect("/aonde")
         args = {
             'msg': 'Fazer login novamente!'
         }
-        print('passou pelo args do else')
-        return render(request, 'index.html', args)
+        return render(request, 'login.html', args)
     return render(request, 'login.html')
 
 def cadastro(request):
     if request.method == 'POST':
-        data = Pessoa()
-        data.nome = request.POST['nome']
-        data.email = request.POST['email']
-        data.password = request.POST['senha']
-        data.data_nascimento = request.POST['nascimento']
-        data.cep = request.POST['cep']
-        data.genero = request.POST['gender']
-        data.save()
+        dados_cadastro = Pessoa()
+        dados_cadastro.nome = request.POST['nome']
+        dados_cadastro.email = request.POST['email']
+        dados_cadastro.password = request.POST['senha']
+        dados_cadastro.data_nascimento = request.POST['nascimento']
+        dados_cadastro.cep = request.POST['cep']
+        dados_cadastro.genero = request.POST['gender']
+        dados_cadastro.save()
 
         args = {
             'aviso': 'Cadastrado'
@@ -49,25 +39,29 @@ def aonde(request):
     return render(request, 'aonde.html')
 
 def perdi (request):
+    nome_usuario = Pessoa.objects.get(nome = request.session['nome'])
     if request.method == 'POST':
-        dados = Item_perdido()
-        dados.descricao = request.POST['descricaoPerdeu']
-        dados.local = request.POST['localPerdeu']
-        dados.data = request.POST['dataPerdeu']
-        dados.tags = request.POST['tagsPerdeu']
-        dados.save()
+        item_perdido = Item_perdido()
+        item_perdido.pessoa = nome_usuario
+        item_perdido.descricao = request.POST['descricaoPerdeu']
+        item_perdido.local = request.POST['localPerdeu']
+        item_perdido.data = request.POST['dataPerdeu']
+        item_perdido.tags = request.POST['tagsPerdeu']
+        item_perdido.save()
 
         return render (request, 'perdi.html')
     return render(request, 'perdi.html')
 
 def achei (request):
+    nome_usuario = Pessoa.objects.get(nome = request.session['nome'])
     if request.method == 'POST':
-        dados = Item_achado()
-        dados.descricao = request.POST['descricaoAchou']
-        dados.local = request.POST['localAchou']
-        dados.data = request.POST['dataAchou']
-        dados.tags = request.POST['tagsAchou']
-        dados.save()
+        item_achado = Item_achado()
+        item_achado.pessoa = nome_usuario
+        item_achado.descricao = request.POST['descricaoAchou']
+        item_achado.local = request.POST['localAchou']
+        item_achado.data = request.POST['dataAchou']
+        item_achado.tags = request.POST['tagsAchou']
+        item_achado.save()
 
         return render (request, 'achei.html')
     return render(request, 'achei.html')
