@@ -26,7 +26,9 @@ class Pessoa(models.Model):
     data_nascimento = models.DateField(
         null = True
     )
-    cep = models.TextField(max_length = 9)
+    cep = models.TextField(
+        max_length = 9
+        )
     genero = models.CharField(
         max_length= 13,
         verbose_name='gender',
@@ -35,7 +37,7 @@ class Pessoa(models.Model):
 
     def __str__(self):
         return self.nome
-
+        
 class Item_perdido(models.Model):
     data = models.DateField(
         null = True
@@ -43,7 +45,7 @@ class Item_perdido(models.Model):
     descricao = models.TextField()
     local = models.TextField()
     pessoa = models.ForeignKey(
-        "Pessoa",
+        Pessoa,
         on_delete = models.CASCADE
         )
     tags = models.TextField()
@@ -58,7 +60,7 @@ class Item_achado(models.Model):
     descricao = models.TextField()
     local = models.TextField()
     pessoa = models.ForeignKey(
-        "Pessoa",
+        Pessoa,
         on_delete = models.CASCADE
         )
     tags = models.TextField()
