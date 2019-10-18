@@ -7,6 +7,7 @@ a{
 body{
     align-items: center;
     background-color: #0B032D;
+    background-image: url("../images/backgroundPhone.png");
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -25,6 +26,7 @@ div{
 div:hover,body:hover{
     background-color: #FFC045;
     transition: .5s ease-in-out;
+    background-image: none;
 }
 .direita, .esquerda{
     border: 1px solid white;
