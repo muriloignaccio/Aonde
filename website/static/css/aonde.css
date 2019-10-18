@@ -9,6 +9,7 @@ body{
     background-color: #0B032D;
     background-image: url("../images/backgroundPhone.png");
     display: flex;
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
     justify-content: center;
     margin: 0;
@@ -29,10 +30,9 @@ div:hover,body:hover{
     background-image: none;
 }
 .direita, .esquerda{
-    border: 1px solid white;
+    border: 2px solid #0B032D   ;
     border-radius: 10px;
     color: #FFC045;
-    font-family: 'Coustard', serif;
     font-size: 18pt;
     height: 10vh;
     pointer-events: auto;
@@ -53,10 +53,21 @@ div:hover,body:hover{
 }
 h1{
     text-align: center;
-    color:white;
+    font-size: 32pt;
+    color: #333333;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 32pt;
+    color: #333333;
+    margin: 0 5vw 15vw 5vw;
+    text-align: center;
 }
 p{
-    text-align: justify;
+    color: #bcbcbc;
+    font-size: 14pt;
+    margin: 5vw;
+    text-align: center;
 }
 section{
     align-items: center;
@@ -64,4 +75,11 @@ section{
     height: 30vh;
     margin: 0;
     justify-content: space-around;
+}
+span, b{
+    color: #FFC045;
+}
+
+@media(min-width: 768px){
+    
 }
