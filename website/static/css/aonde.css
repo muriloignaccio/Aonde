@@ -6,62 +6,118 @@ a{
 }
 body{
     align-items: center;
-    background-color: #0B032D;
     background-image: url("../images/backgroundPhone.png");
+    background-size: contain;
     display: flex;
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
     justify-content: center;
     margin: 0;
-    pointer-events: none;
-    transition: .5s ease-in-out;
 }
 div{
     background-color: white;
     border-radius: 20px;
     height: 80vh;
-    pointer-events: none;
-    transition: .5s ease-in-out;
     width: 90vw;
 }
-div:hover,body:hover{
-    background-color: #FFC045;
-    transition: .5s ease-in-out;
-    background-image: none;
-}
+
 .direita, .esquerda{
-    border: 1px solid white;
+    border: 2px solid #0B032D;
     border-radius: 10px;
     color: #FFC045;
-    font-family: 'Coustard', serif;
     font-size: 18pt;
     height: 10vh;
-    pointer-events: auto;
-    transition: .5s ease-in-out;
     width: 35vw;
-}
-.direita:hover, .esquerda:hover{
-    background-color: #FFC045;
-    color: white;
-    font-size: 50pt;
-    transition: .5s ease-in-out;
-    width: 30vw;
-}
-.esquerda:hover + .direita{
-    background-color: #FFC045;
-    color: #FFC045;
-    transition: .5s ease-in-out;
 }
 h1{
     text-align: center;
-    color:white;
+    font-size: 32pt;
+    color: #333333;
+    margin-bottom: 0;
+}
+h2{
+    font-size: 32pt;
+    color: #333333;
+    margin: 0 5vw 10vh 5vw;
+    text-align: center;
 }
 p{
-    text-align: justify;
+    color: #bcbcbc;
+    font-size: 14pt;
+    margin: 5vh 5vw;
+    text-align: center;
 }
 section{
     align-items: center;
     display: flex;
-    height: 30vh;
+    height: 20vh;
     margin: 0;
     justify-content: space-around;
+}
+span, b{
+    color: #FFC045;
+}
+
+@media(min-width: 768px){
+    body{
+        pointer-events: none;
+        transition: .5s ease-in-out;
+    }
+    h1{
+        pointer-events: none;
+        margin-top: 5vh;
+        transition: .3s ease-in-out;
+    }
+    h1:hover{
+        color: #FFC045;
+    }
+    h2{
+        margin-bottom: 5vh;
+        transition: .3s ease-in-out;
+    }
+    p{
+        margin: 10vh 10vw;
+        pointer-events: none;
+        transition: .3s ease-in-out;
+    }
+    div{
+        pointer-events: none;
+        transition: .5s ease-in-out;
+        width: 60vw;
+    }
+    .esquerda, .direita{
+        pointer-events: auto;
+        transition: .5s ease-in-out;
+        width:35%;
+    }
+    section{
+        justify-content: space-evenly;
+    }
+    div:hover,body:hover{
+        background-color: #FFC045;
+        transition: .5s ease-in-out;
+        background-image: none;
+    }
+    div:hover h1, div:hover h2, div:hover p{
+        opacity: 0;
+        transition: .3s ease-in-out;
+    }
+    .direita:hover, .esquerda:hover{
+        background-color: #FFC045;
+        color: white;
+        font-size: 50pt;
+        transition: .5s ease-in-out;
+        width: 30vw;
+        border: 2px solid #FFC045;
+    }
+    .esquerda:hover + .direita{
+        border: 2px solid #FFC045;
+        background-color: #FFC045;
+        color: #FFC045;
+        transition: .5s ease-in-out;
+    }
+    p:hover{
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
 }
