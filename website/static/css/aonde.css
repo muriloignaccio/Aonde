@@ -49,6 +49,13 @@ div:hover,body:hover{
     color: #FFC045;
     transition: .5s ease-in-out;
 }
+h1{
+    text-align: center;
+    color:white;
+}
+p{
+    text-align: justify;
+}
 section{
     align-items: center;
     display: flex;
