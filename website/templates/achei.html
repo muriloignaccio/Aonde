@@ -7,22 +7,24 @@ href="{% static 'css/achei.css' %}"
 
 {% block content %}
 
+<nav>  
+        <a href="#">tudo</a>
+        <a href="#">nosso</a>
+</nav>
 
-<div>
+<div class="princ">
         <form action="" method="POST">
         {% csrf_token %}
-            <label>Descreva como você achou o item. Exemplo: Encontrei um livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
-            <textarea  name='descricaoAchou' placeholder='Descreva aqui...' cols="30" rows="10"></textarea>
-            <label>Local:</label>
-            <input name="localAchou" placeholder="Local em que foi perdido...">
-            <label>Data:</label>
-            <input type="date" name="dataAchou">
-            <label>Descreva, usando tags, o item achado. Exemplo: #livro #harrypotter #novo </label>
-            <textarea  name='tagsAchou' placeholder='Descreva aqui...' cols="30" rows="10"></textarea>
-            <input type="submit">
+                <label>Descreva como você achou o item. Exemplo: Encontrei um livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
+                <textarea  name='descricaoAchou' placeholder='Descreva aqui...' cols="30" rows="2"></textarea>
+                <label>Local:</label>
+                <input name="localAchou" placeholder="Local em que foi perdido...">
+                <label>Data:</label>
+                <input type="date" name="dataAchou">
+                <label>Descreva, usando tags, o item achado. Exemplo: #livro #harrypotter #novo </label>
+                <textarea  name='tagsAchou' placeholder='Descreva aqui...' cols="30" rows="2"></textarea>
+                <input type="submit">
         </form>
-</div>
-<div class='aviso'>
         <p>
                 <h2>Obrigado!</h2>
                 <h3>Encontraremos o dono do item rapidinho... Graças a  você! ;)</h3>

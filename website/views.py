@@ -7,14 +7,25 @@ def index(request):
 
 def login(request):
     if request.method == 'POST':
-        usuario = Pessoa.objects.get(email = request.POST['email'])
-        request.session['nome'] = usuario.nome
-        if usuario.password == request.POST['senha']:
-            return redirect("/aonde")
-        args = {
-            'msg': 'Fazer login novamente!'
-        }
-        return render(request, 'login.html', args)
+        try:
+            usuario = Pessoa.objects.get(email = request.POST['email'])
+        except Pessoa.DoesNotExist:
+            usuario = None
+        if usuario is not None:
+            request.session['nome'] = usuario.nome
+            if usuario.password == request.POST['senha']:
+                return redirect("/aonde")
+            else:
+                args = {
+                    'msg': 'Senha Incorreta'
+                }
+                return render(request, 'login.html', args)
+        else:
+            print('ci')
+            args = {
+                'msg': 'Usuário não encontrado'
+            }
+            return render(request, 'login.html', args)
     return render(request, 'login.html')
 
 def cadastro(request):
