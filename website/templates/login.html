@@ -7,17 +7,19 @@ href="{% static 'css/login.css' %}"
 
 {% block content %}
 
-<nav>
+<!-- <nav>
     <a href="#">Quarta</a>
     <a href="#">feira</a>
-</nav>
-
-<div class="header">
-    <h1>Para continuar, faça login no Aonde.</h1>
-</div>
+    <!-- <div class="img-nav">
+        <img src="../static/images/icone-livro-7.png" alt="icone qualquer">
+    </div>
+</nav> -->
 
 <div class="login">
-    <a href="">Entrar com facebook</a>
+    <h1>Seja bem vindo, entre e divirta-se</h1>
+    <button class='facebook'>
+    <a href="">ENTRAR COM FACEBOOK</a>
+    </button>
     <h2>ou</h2>
     {{msg}}
     <form action="/login" method="POST">
@@ -35,6 +37,14 @@ href="{% static 'css/login.css' %}"
 <h3>Não tem uma conta?</h3>
 <a href="/cadastro">Inscrever-se no aonde</a>
 </div>
-
-
+<!-- 
+<footer>
+    <div class="fotlink">
+        <a href="#">Link</a>
+        <a href="#">todas</a>
+        <a href="#">as</a>
+        <a href="#">paginas</a>
+        <a href="#">:)</a>
+    </div>
+</footer> -->
 {% endblock %}

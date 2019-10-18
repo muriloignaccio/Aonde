@@ -1,7 +1,10 @@
 body{
     background-color: #ffaa7c;
+    background-image: url(../images/backgroundPhone.png);
     margin: 0;
     justify-content: center;
+    align-items: center;
+    display: flex;
 }
 nav{
     background-color: #03182b;
@@ -11,22 +14,43 @@ nav{
     align-items: center;
     width: 100%;
 }
-.header{
+.login{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    width: 90vw;
+    background-color: white;
+    border-radius: 20px;
+}
+h1{
+    height: 70px;
+    width: 100%;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    margin-top: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightsteelblue;
+    font-size: 17px;
 }
-.login{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 30vw;
-    width: 30%;
-    background-color: white;
+input{
+    margin: 7px;
+}
+.facebook{
+    height: 50px;
+    width: 140px;
+    border-radius: 20px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
     margin-top: 35px;
-    margin-left: 35%;
+}
+h2{
+    margin: 0;
 }
 .email{
     display: flex;
@@ -37,7 +61,13 @@ nav{
     flex-direction: column;
     width: 70px;
 }
-login a{
+.login a{
     text-decoration: none;
     color: white;
+}
+.fotlink{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
