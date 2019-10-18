@@ -10,32 +10,32 @@ body{
     display: flex;
     height: 100vh;
     justify-content: center;
-    pointer-events: none;
     margin: 0;
+    pointer-events: none;
     transition: .5s ease-in-out;
 }
 div{
-    background-color: #0B032D;
+    background-color: white;
     border-radius: 20px;
     height: 80vh;
     pointer-events: none;
     transition: .5s ease-in-out;
-    width: 80vw;
+    width: 90vw;
 }
 div:hover,body:hover{
     background-color: #FFC045;
     transition: .5s ease-in-out;
 }
 .direita, .esquerda{
-    border-radius: 50px;
-    border: 2px solid #FFC045;
+    border: 1px solid white;
+    border-radius: 10px;
     color: #FFC045;
     font-family: 'Coustard', serif;
-    font-size: 22pt;
+    font-size: 18pt;
     height: 10vh;
     pointer-events: auto;
     transition: .5s ease-in-out;
-    width: 200px;
+    width: 35vw;
 }
 .direita:hover, .esquerda:hover{
     background-color: #FFC045;
@@ -44,7 +44,7 @@ div:hover,body:hover{
     transition: .5s ease-in-out;
     width: 30vw;
 }
-.direita:hover + .esquerda{
+.esquerda:hover + .direita{
     background-color: #FFC045;
     color: #FFC045;
     transition: .5s ease-in-out;
@@ -52,7 +52,7 @@ div:hover,body:hover{
 section{
     align-items: center;
     display: flex;
-    flex-direction: column;
     height: 30vh;
-    justify-content: space-between;
+    margin: 0;
+    justify-content: space-around;
 }
