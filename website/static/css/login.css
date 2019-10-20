@@ -48,6 +48,7 @@ input{
     text-decoration: none;
     border: none;
     margin-top: 35px;
+    cursor: pointer;
 }
 button a{
     color: white;

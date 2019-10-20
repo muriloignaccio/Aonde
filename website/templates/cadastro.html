@@ -18,15 +18,15 @@ href="{% static 'css/cadastro.css' %}"
     
     <div class="inputs">
         <h1>Faça seu cadastro</h1>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-        <input type="email" name="email" placeholder="Digite seu email">
-        <input type="password" name="senha" placeholder="Digite sua senha">
-        <input type="date" name="nascimento">
-        <input type="text" name="cep" pattern="[0-9]*" placeholder="Digite seu CEP">
+        <input required type="text" name="nome" placeholder="Digite seu nome">
+        <input required type="email" name="email" placeholder="Digite seu email">
+        <input required type="password" name="senha" placeholder="Digite sua senha">
+        <input required type="date" name="nascimento">
+        <input required type="text" name="cep" pattern="[0-9]*" placeholder="Digite seu CEP">
         <label>Gênero</label>
-        <input type="radio" name="gender" value="M">Masculino
-        <input type="radio" name="gender" value="F">Feminino
-        <input type="radio" name="gender" value="NB">Não-Binário
+        <input required type="radio" name="gender" value="M">Masculino
+        <input required type="radio" name="gender" value="F">Feminino
+        <input required type="radio" name="gender" value="NB">Não-Binário
         <input type="submit" value="Próximo">
         <a href="/login">Já possui cadastro?</a>
     </div>
