@@ -5,10 +5,10 @@ body{
     align-items: center;
     background-image: url(../images/backgroundPhone.png);
     background-size: contain;
-    margin: 0;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     height: 100vh;
+    margin: 0;
 }
 body > div{
     background-color: white;
@@ -32,14 +32,14 @@ body > div{
 div > h1{
     color: black;
     font-family: 'Oswald', sans-serif;
-    text-align: center;
     font-size: 25px;
     margin: 5vh 0 0 0;
+    text-align: center;
 }
 div > p{
     font-family: 'Oswald', sans-serif;
-    text-align: center;
     margin: 0;
+    text-align: center;
 }
 div > p:nth-child(6){
     font-size: 16pt;
@@ -63,13 +63,13 @@ form > input{
     width: 70vw;
 }
 form > div{
-    display: flex;
-    justify-content: left;
-    width: 85%;
     color: gray;
+    display: flex;
     font-family: 'Oswald', sans-serif;
+    justify-content: left;
     letter-spacing: 1px;
     margin: 1vh 0;
+    width: 85%;
 }
 header{
     align-items: center;
@@ -96,4 +96,50 @@ span{
 }
 #linkSenha > a{
     color: #FFC045;
+}
+@media(min-width: 768px){
+    body > div{
+        width: 50vw;
+    }
+    #btnFacebook{
+        width: 52%;
+        transition: .1s ease-in-out;
+    }
+    #btnFacebook:hover{
+        color: #3b5998;
+        border: solid 1px #3b5998;
+        background-color: white;
+        transition: .1s ease-in-out;
+    }
+    form > input{
+        width: 50%;
+    }
+    form > div{
+        width: 53%;
+    }
+    input[type="submit"]{
+        cursor: pointer;
+        transition: .1s ease-in-out;
+        width: 52%;
+    }
+    input[type="submit"]:hover{
+        opacity: 0.90;
+        background-color: #28004e;
+        color: #FFC045;
+        transition: .1s ease-in-out
+    }
+    #linkSenha > a{
+        transition: .1s ease-in-out;
+    }
+    #linkSenha > a:hover{
+        color: #28004e;
+        transition: .1s ease-in-out;
+    }
+    div > p:nth-child(6) > a{
+        transition: .1s ease-in-out;
+    }
+    div > p:nth-child(6) > a:hover{
+        color: #28004e;
+        transition: .1s ease-in-out;
+    }
 }
