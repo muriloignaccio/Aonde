@@ -1,91 +1,24 @@
 body{
-    background-color: #ffaa7c;
+    align-items: center;
     background-image: url(../images/backgroundPhone.png);
+    background-size: contain;
     margin: 0;
     justify-content: center;
-    align-items: center;
     display: flex;
+    height: 100vh;
 }
-nav{
-    background-color: #03182b;
-    height: 75px;
-    justify-content: space-around;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-.login{
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 80vh;
-    width: 50vw;
+body > div{
     background-color: white;
-    border-radius: 20px;
+    height: 90vh;
+    width: 90vw;
 }
-h1{
+div > h1{
+    color: black;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
-    font-family: 'Coustard', serif;
-    width: 100%;
-    color: #ffaa7c;
-    border: none;
-    margin-top: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17pt;
+    font-size: 25px;
+    margin: 5vh 0 0 0;
 }
-input{
-    margin: 7px;
+span{
+    color: #FFC045;
 }
-.facebook{
-    height: 50px;
-    width: 140px;
-    border-radius: 20px;
-    background-color: #3b5998;
-    text-decoration: none;
-    border: none;
-    margin-top: 35px;
-}
-button a{
-    color: white;
-    text-decoration: none;
-}
-h2{
-    margin: 0;
-    text-align: center;
-    font-family: 'Coustard', serif;
-    color: #ffaa7c;
-}
-h3{
-    text-align: center;
-    font-family: 'Coustard', serif;
-    color: #ffaa7c;
-}
-.email{
-    display: flex;
-    flex-direction: column;
-}
-.entrar{
-    display: flex;
-    flex-direction: column;
-    width: 70px;
-}
-.final{
-    text-align: center;
-    font-family: 'Coustard', serif;
-    width: 100%;
-    color: #ffaa7c;
-}
-a{
-    text-decoration: none;
-}
-/* .fotlink{
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-} */
-
