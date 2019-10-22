@@ -6,27 +6,21 @@
 {% block content %}
 
 <div>
-        <form action="" method="POST">
-        {% csrf_token %}
-                <h1>Descreva como você achou o item. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
-                <label for="imagem">Se preferir, coloque uma foto do item!</label>
-                <div id="btnImagem">
-                        <input id="botao" type="file" name="imagem">
-                        <label for="botao">Selecione um arquivo</label>
-                </div>
-                <textarea  name='descricaoAchou' placeholder='Descreva aqui...' cols="30" rows="2"></textarea>
-                <label>Local:</label>
-                <input name="localAchou" placeholder="Local em que foi perdido...">
-                <label>Data:</label>
-                <input type="date" name="dataAchou">
-                <label>Descreva, usando tags, o item achado. Exemplo: #livro #harrypotter #novo </label>
-                <textarea  name='tagsAchou' placeholder='Descreva aqui...' cols="30" rows="2"></textarea>
-                <input type="submit">
-        </form>
-        <p>
-                <h2>Obrigado!</h2>
-                <h3>Encontraremos o dono do item rapidinho... Graças a  você! ;)</h3>
-        </p>
+	<form action="" method="POST">
+	{% csrf_token %}
+			<h1>Preencha como você achou o item. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
+			<label for="imagem">Se preferir, coloque uma foto do item!</label>
+			<div id="btnImagem">
+				<input id="botao" type="file" name="imagem">
+				<label for="botao">Selecione um arquivo</label>
+			</div>
+			<textarea  name='descricaoAchou' placeholder='Descreva aqui o item achado, lembrando que quanto mais detalhes melhor!' cols="30" rows="2"></textarea>
+			<input name="localAchou" placeholder="Onde foi que você achou?">
+			<label>Data quando achou item</label>
+			<input type="date" name="dataAchou">
+			<textarea  name='tagsAchou' placeholder='Descreva o item achado utilizando tags. Exemplo: #livro #harrypotter #novo' cols="30" rows="2"></textarea>
+			<input type="submit" value="ENVIAR">
+	</form>
 </div>
 
 {% endblock %}
