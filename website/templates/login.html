@@ -1,26 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}
-href="{% static 'css/login.css' %}"
-{% endblock %}
+{% block css %} href="{% static 'css/login.css' %}" {% endblock %}
 
 {% block content %}
 
-<!-- <nav>
-    <a href="#">Quarta</a>
-    <a href="#">feira</a>
-    <!-- <div class="img-nav">
-        <img src="../static/images/icone-livro-7.png" alt="icone qualquer">
-    </div>
-</nav> -->
-
-<div class="login">
-    <h1>Faça seu login e junte-se à nossa rede de achados e perdidos.</h1>
-    <button class='facebook'>
-    <a href="">ENTRAR COM FACEBOOK</a>
-    </button>
-    <h2>ou</h2>
+<div>
+    <h1>Faça login no <span>Aonde!</span></h1>
+    <header>
+        <a href="" class="btnFacebook">ENTRAR COM O FACEBOOK</a>
+    </header>
+    <P>OU</P>
     {{msg}}
     <form action="/login" method="POST">
     {% csrf_token %}
