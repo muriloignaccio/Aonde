@@ -1,33 +1,31 @@
 body{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
     background-image: url("../images/backgroundPhone.png");
     background-size: contain; 
+    display: flex;
+    height: 115vh;
+    justify-content: center;
 }
 body > div{
     align-items: center;
     background-color: white;
-    height: 90vh;
+    height: 105vh;
     display: flex;
     flex-direction: column;
     width: 90vw;
     border-radius: 20px;
 }
 form{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-h1{
-    font-size: 16pt;
+form > input{
+    width: 67vw;
+    height: 7vh;
     font-family: 'Oswald', sans-serif;
-    margin: 5vw;
-    text-align: center;
-}
-span{
-    color: #FFC045;
+    font-size: 12pt;
+    margin: 1vh 0;
 }
 form > label{
     font-family: 'Oswald', sans-serif;
@@ -36,14 +34,72 @@ form > label{
     text-align: center;
     width: 100vw;
 }
+form > label:nth-child(7){
+    text-align: left;
+    width: 71vw;
+    font-size: 12pt;
+}
+form > textarea{
+    font-family: 'Oswald', sans-serif;
+    margin: 1vh 0;
+}
+form > textarea:nth-child(5){
+    width: 70vw;
+    height: 20vh;
+}
+form > textarea:nth-child(9){
+    height: 10vh;
+    width: 70vw;
+}
+h1{
+    font-size: 16pt;
+    font-family: 'Oswald', sans-serif;
+    margin: 5vw;
+    text-align: center;
+}
+input[type="submit"]{
+    border: none;
+    background-color: #FFC045;
+    color: white;
+    height: 8vh;
+    letter-spacing: 1px;
+    width: 75vw;
+    margin: 3vh 0;
+}
+#btnImagem{
+    margin: 4vh 0;
+}
 #btnImagem > input[type="file"]{
     display: none;
 }
 #btnImagem > label{
         background-color: #FFC045;
-        border-radius: 5px;
+        border-radius: 2px;
         color: white;
         cursor: pointer;
-        margin: 10px;
-        padding: 6px 20px
+        font-family: 'Oswald', sans-serif;
+        padding: 1vh 2vh;
+}
+span{
+    color: #FFC045;
+}
+@media(min-width: 768px){
+    body > div{
+        width: 50vw;
+    }
+    h1{
+        margin: 6vh 0;
+    }
+    form > textarea:nth-child(odd){
+        width: 30vw;
+    }
+    form > input:nth-child(even){
+        width: 29vw;
+    }
+    form > input:nth-child(10){
+        width: 31vw;
+    }
+    form > label:nth-child(7){
+        width: 30vw;
+    }
 }
