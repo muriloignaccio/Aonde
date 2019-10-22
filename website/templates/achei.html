@@ -1,21 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}
-href="{% static 'css/achei.css' %}"
-{% endblock %}
+{% block css %} href="{% static 'css/achei.css' %}" {% endblock %}
 
 {% block content %}
 
-<nav>  
-        <a href="#">tudo</a>
-        <a href="#">nosso</a>
-</nav>
-
-<div class="princ">
+<div>
         <form action="" method="POST">
         {% csrf_token %}
-                <label>Descreva como você achou o item. Exemplo: Encontrei um livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
+                <h1>Descreva como você achou o item. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
+                <label for="imagem">Se preferir, coloque uma foto do item!</label>
+                <div id="btnImagem">
+                        <input id="botao" type="file" name="imagem">
+                        <label for="botao">Selecione um arquivo</label>
+                </div>
                 <textarea  name='descricaoAchou' placeholder='Descreva aqui...' cols="30" rows="2"></textarea>
                 <label>Local:</label>
                 <input name="localAchou" placeholder="Local em que foi perdido...">
@@ -30,6 +28,5 @@ href="{% static 'css/achei.css' %}"
                 <h3>Encontraremos o dono do item rapidinho... Graças a  você! ;)</h3>
         </p>
 </div>
-
 
 {% endblock %}
