@@ -1,35 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}
-href="{% static 'css/cadastro.css' %}"
-{% endblock %}
+{% block css %} href="{% static 'css/cadastro.css' %}" {% endblock %}
 
 {% block content %}
-<form method="POST">
-    {{aviso}}
-    {% csrf_token %}
-
-    <nav>
-        <a href="#">Quarta</a>
-        <a href="#">feira</a>
-    </nav>
-
-    
-    <div class="inputs">
-        <h1>Faça seu cadastro</h1>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-        <input type="email" name="email" placeholder="Digite seu email">
-        <input type="password" name="senha" placeholder="Digite sua senha">
-        <input type="date" name="nascimento">
-        <input type="text" name="cep" pattern="[0-9]*" placeholder="Digite seu CEP">
-        <label>Gênero</label>
-        <input type="radio" name="gender" value="M">Masculino
-        <input type="radio" name="gender" value="F">Feminino
-        <input type="radio" name="gender" value="NB">Não-Binário
-        <input type="submit" value="Próximo">
-        <a href="/login">Já possui cadastro?</a>
-    </div>
-        
-</form>
+<div>
+    <h1>Crie sua conta no<span> Aonde!</span></h1>
+    <header>
+        <a id="btnFacebook"href="">CADASTRE-SE COM O FACEBOOK</a>
+    </header>
+    <p>OU</p>
+    <form method="POST">
+        {{aviso}}
+        {% csrf_token %}
+        <input type="text" name="nome" placeholder="Como devemos te chamar?" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <label for="nascimento">Data de Nascimento</label>
+        <input type="date" name="nascimento" required>
+        <input type="text" name="cep" pattern="[0-9]*" placeholder="Digite seu CEP" required>
+        <div class="escolhas">
+            <div>
+                <input type="radio" name="gender" value="M">
+                <label for="M">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="F">
+                <label for="F">Feminino</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="NB">
+                <label for="NB">Não binário</label>
+            </div>
+        </div>
+        <input type="submit" value="CRIAR CONTA">
+    </form>
+    <p class="registerLink">Já possui cadastro? <a href="/login">Entrar</a></p>
+</div>
 {% endblock %}
