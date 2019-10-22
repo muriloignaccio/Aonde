@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../images/backgroundPhone.png");
+    background-size: contain; 
+}
+body > div{
+    align-items: center;
+    background-color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 16pt;
+    font-family: 'Oswald', sans-serif;
+    margin: 5vw;
+    text-align: center;
+}
+span{
+    color: #FFC045;
+}
+form > label{
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    font-size: 14pt;
+    text-align: center;
+    width: 100vw;
+}
+#btnImagem > input[type="file"]{
+    display: none;
+}
+#btnImagem > label{
+        background-color: #FFC045;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+        padding: 6px 20px
+}
