@@ -1,8 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block css %}
+href="{% static 'css/perdi.css' %}"
+{% endblock %}
+
 {% block content %}
 <div>
     <form action="" method="POST">
             {% csrf_token %}
+            
+            <h1>Descreva o item que você perdeu. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
+            <label for="imagem">Se preferir, coloque uma foto do item perdido!</label>
+            <div id="btnImagem">
+                    <input id="botao" type="file" name="imagem">
+                    <label for="botao">Selecione um arquivo</label>
+            </div>
             <label>Descreva como você perdeu o item. Exemplo: Perdi meu livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
             <textarea name='descricaoPerdeu' placeholder='Descreva aqui...' cols="30" rows="10"></textarea>
             <label>Local:</label>
@@ -14,10 +27,5 @@
             <input type="submit" value="Enviar">
     </form>
 </div>
-<div class='caixa'>
-    <p>
-        <h2>Entraremos em contato!</h2>
-        <h3>Obrigado por confiar no Aonde. ;)</h3>
-    </p>
-</div>
+
 {% endblock %}
