@@ -22,12 +22,17 @@ div{
 }
 
 .direita, .esquerda{
-    border: 2px solid #0B032D;
+    font-family: 'Oswald', sans-serif;;
+    border: 2px solid #FFC045;
     border-radius: 10px;
     color: #FFC045;
-    font-size: 18pt;
+    font-size: 20pt;
     height: 10vh;
+    letter-spacing: 3px;
     width: 35vw;
+}
+header{
+    margin-top: 10vh;
 }
 h1{
     text-align: center;
@@ -86,6 +91,7 @@ span, b{
         width: 60vw;
     }
     .esquerda, .direita{
+        font-size: 16pt;
         pointer-events: auto;
         transition: .5s ease-in-out;
         width:35%;
