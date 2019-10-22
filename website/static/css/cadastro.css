@@ -50,7 +50,6 @@ form{
 }
 form > input{
     font-size: 12pt;
-    color: #c3c0c9;
     letter-spacing: 1px;
     font-family: 'Oswald', sans-serif;
     margin: 1vh 0;
@@ -108,7 +107,10 @@ span{
     flex-direction: column;
     font-size: 12pt;
     margin: 3vh 0;
-    width: 85%
+    width: 85%;
+    color: gray;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
 }
 @media(min-width: 768px){
     body > div{
@@ -133,8 +135,8 @@ span{
     }
     .escolhas{
         flex-direction: row;
-        width: 100%;
-        justify-content: center;
+        width: 53%;
+        justify-content: space-between;
     }
     input[type="submit"]{
         cursor: pointer;
