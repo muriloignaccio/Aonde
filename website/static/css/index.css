@@ -1,0 +1,230 @@
+body{
+    display: grid;
+    grid-template-areas: 'nav'
+                'apresentacao'
+                'praticidade'
+                'patrocinadores'
+                'pontos'
+                'footer';
+    grid-template-columns: 99.9vw;
+    grid-template-rows: 70px 560px 450px 300px 300px 300px;
+    margin: 0;
+}
+nav{
+    grid-area: nav;
+    background-color: #171749;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 13px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: space-around;
+    width: 30px;
+    margin: 10px;
+}
+span{
+    background-color: #ffc045;
+    height: 3px;
+}
+.apresentacao{
+    color: black;
+    grid-area: apresentacao;
+    background-color: #171749;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 120px;
+}
+.textinho{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
+}
+.textinho h1{
+    display: flex;
+    justify-content: space-around;
+    color: #ffc045;
+}
+.textinho h2{
+    padding-left: 5px;
+    color: white;
+}
+.textinho p{
+    color: white;
+}
+.caixa img{
+    display: none;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 140px;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 0;
+    font-size: 14pt;
+    font-family: 'Oswald', sans-serif;
+    background-color: #171749;
+    border: 2px solid #ffc045;
+    color: white;
+}
+.praticidade{
+    background-image: url(../images/backgroundPhone.png);
+    grid-area: praticidade;
+    background-color: lightpink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bloco{
+    height: 60vh;
+    width: 80vw;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+    color: #171749;
+    padding: 2px;
+}
+.patrocinadores{
+    grid-area: patrocinadores;
+    background-color:#ffc045;
+}
+.patrocinadores h2{
+    font-family: 'Oswald', sans-serif;
+    padding-left: 30px;
+}
+.patrocinam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+}
+.patrocinam img{
+    display: flex;
+    justify-content: space-between;
+}
+.pontos{
+    grid-area: pontos;
+    background-color: #171749;
+}
+.pontos h2{
+    font-family: 'Oswald', sans-serif;
+    padding-left: 30px;
+    color: #ffc045;
+}
+.pontos p{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 0 10px 0 10px;
+    text-align: justify;
+}
+footer{
+    font-family: 'Roboto', sans-serif;
+    grid-area: footer;
+    background-color: #ffc045;
+}
+footer h3{
+    padding-left: 20px;
+}
+.final{
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+}
+.imagens{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (min-width: 550px){
+    body{
+        display: grid;
+        grid-template-areas: 'nav'
+                    'apresentacao'
+                    'praticidade'
+                    'patrocinadores'
+                    'pontos'
+                    'footer';
+        grid-template-columns: 99.9vw;
+        grid-template-rows: 50px 400px 350px 320px 300px 300px;
+        margin: 0;
+    }
+    .menu{
+        display: none;
+    }
+    .apresentacao{
+        grid-area: apresentacao;
+        grid-template-areas: 'textinho caixa';
+        grid-template-columns: 65% 35%;
+        display: grid;
+        justify-content: space-between;
+    }
+    .textinho{
+        padding-top: 140px;
+    }
+    .textinho h1{
+        display: none;
+    }
+    .botao > a:hover{
+        background-color: #FFC045;
+        color: #171749;
+        transition: .1s ease-in-out
+
+    }
+    .caixa{
+        display: flex;
+        justify-content: center;
+    }
+    .caixa img{
+        display: block;
+    }
+    .praticidade{
+        grid-area: praticidade;
+        background-color: lightskyblue;
+        background-image: url(../images/background.png);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .bloco{
+        height: 40vh;
+        width: 80vw;
+        background-color: white;
+        border-radius: 20px;
+        font-size: 17pt;
+        font-family: 'Oswald', sans-serif;
+        color: #171749;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+    }
+    .patrocinam{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 250px;
+    }
+    .pontos{
+        display: grid;
+        grid-template-areas: 'um dois';
+        grid-template-columns: 65% 35%;
+        font-size: 18pt;
+    }
+    .dois{
+        display: flex;
+        justify-content: space-around;
+    }
+}
