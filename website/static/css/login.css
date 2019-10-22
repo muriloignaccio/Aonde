@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 body{
     align-items: center;
     background-image: url(../images/backgroundPhone.png);
@@ -9,8 +12,22 @@ body{
 }
 body > div{
     background-color: white;
+    border-radius: 20px;
     height: 90vh;
     width: 90vw;
+}
+#btnFacebook{
+    align-items: center;
+    background-color: #3b5998;
+    border-radius: 2px;
+    color: white;
+    display: flex;
+    font-size: 12pt;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    height: 8vh;
+    width: 75vw;
 }
 div > h1{
     color: black;
@@ -19,6 +36,64 @@ div > h1{
     font-size: 25px;
     margin: 5vh 0 0 0;
 }
+div > p{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+div > p:nth-child(6){
+    font-size: 16pt;
+    margin: 5vh 0;
+}
+div > p:nth-child(6) > a{
+    color: #FFC045;
+}
+form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+form > input{
+    font-size: 12pt;
+    letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    margin: 1vh 0;
+    height: 7vh;
+    width: 70vw;
+}
+form > div{
+    display: flex;
+    justify-content: left;
+    width: 85%;
+    color: gray;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    margin: 1vh 0;
+}
+header{
+    align-items: center;
+    display: flex;
+    height: 18vh;
+    justify-content: center;
+}
+input[type="submit"]{
+    border: none;
+    background-color: #FFC045;
+    color: white;
+    height: 8vh;
+    letter-spacing: 1px;
+    width: 75vw;
+}
 span{
+    color: #FFC045;
+}
+#linkSenha{
+    font-size: 12pt;
+    letter-spacing: 1px;
+    margin: 1vh 0;
+    width: 100%;
+}
+#linkSenha > a{
     color: #FFC045;
 }
