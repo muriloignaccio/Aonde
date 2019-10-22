@@ -1,44 +1,49 @@
 body{
-    background-color: #ffaa7c;
-    background-image: url('../images/background.png');
-    margin: 0;
-    flex-direction: column;
-    margin-left: 30vw;
-    margin-right: 30vw;
-}
-nav{
-    background-color: #0d3357;
-    height: 75px;
-    justify-content: space-around;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    height: 100vh;
+    background-image: url("../images/backgroundPhone.png");
+    background-size: contain; 
 }
-a{
-    text-decoration: none;
-    color: white;
-}
-.princ{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+body > div{
     align-items: center;
-    height: 60vw;
-    width: 40vw;
     background-color: white;
-    margin-top: 35px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    border-radius: 20px;
 }
 form{
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-h2, h3{
-    color: #ffaa7c;
-    margin: 1vw;
-    font-size: 45px;
+h1{
+    font-size: 16pt;
+    font-family: 'Oswald', sans-serif;
+    margin: 5vw;
+    text-align: center;
 }
-label{
-    font-size: 25px;
-} 
-input{
-    height: 35px ;
+span{
+    color: #FFC045;
+}
+form > label{
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    font-size: 14pt;
+    text-align: center;
+    width: 100vw;
+}
+#btnImagem > input[type="file"]{
+    display: none;
+}
+#btnImagem > label{
+        background-color: #FFC045;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+        padding: 6px 20px
 }
