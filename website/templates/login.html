@@ -8,34 +8,21 @@
 <div>
     <h1>Faça login no <span>Aonde!</span></h1>
     <header>
-        <a href="" class="btnFacebook">ENTRAR COM O FACEBOOK</a>
+        <a href="" id="btnFacebook">ENTRAR COM O FACEBOOK</a>
     </header>
-    <P>OU</P>
+    <p>OU</p>
     {{msg}}
     <form action="/login" method="POST">
     {% csrf_token %}
-    <div class='email'>
-    <input type="email" name="email" placeholder="digite seu email" required>
-    <input type="password" name="senha" placeholder='digite sua senha' required>
-    </div>
-   <input type="checkbox" name="lembrar">Lembrar de mim
-   <div class='entrar'>
-    <input type="submit" value="entrar">
-    </div>
-</form>
-    <div class='final'>
-    <a href="">Esqueceu sua senha?</a>
-    <h3>Não tem uma conta?</h3>
-    <a href="/cadastro">Inscrever-se no aonde</a>
+        <input required type="email" name="email" placeholder="Endereço de e-mail">
+        <input required type="password" name="senha" placeholder='Senha'>
+        <div>
+            <input type="checkbox" name="lembrar">
+            <label for="lembrar">Lembrar de mim</label>
+        </div>
+        <input type="submit" value="ENTRAR">
+    </form>
+    <p id="linkSenha"><a href="">Esqueceu sua senha?</a></p>
+    <p>Não tem uma conta?<a href="/cadastro"> Inscreva-se</a></p>
 </div>
-<!-- 
-<footer>
-    <div class="fotlink">
-        <a href="#">Link</a>
-        <a href="#">todas</a>
-        <a href="#">as</a>
-        <a href="#">paginas</a>
-        <a href="#">:)</a>
-    </div>
-</footer> -->
 {% endblock %}
