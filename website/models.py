@@ -43,7 +43,7 @@ class Item_perdido(models.Model):
         null = True
         )
     descricao = models.TextField()
-    imagem = models.ImageField(upload_to='static/images')
+    imagem = models.ImageField(upload_to='upload_photo')
     local = models.TextField()
     pessoa = models.ForeignKey(
         Pessoa,
@@ -59,7 +59,7 @@ class Item_achado(models.Model):
         null = True
         )
     descricao = models.TextField()
-    imagem = models.ImageField(upload_to='static/images')
+    imagem = models.ImageField(upload_to='upload_photo')
     local = models.TextField()
     pessoa = models.ForeignKey(
         Pessoa,
