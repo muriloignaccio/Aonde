@@ -1,76 +1,87 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}
-href="{% static 'css/index.css' %}"
-{% endblock %}
+{% block css %} href="{% static 'css/index.css' %}" {% endblock %}
 
 {% block content %}
 
 <body>
     <nav>
+        <div>
+            <img src="../static/images/logo.png" alt="Imagem de uma caixa amarela representando o logo">
+            <p>AONDE</p>
+        </div>
         <div class='menu'>
             <span class='traco-1'></span>
             <span class='traco-2'></span>
             <span class='traco-3'></span>
         </div>
     </nav>
-    <div class='apresentacao'>
-        <div class='textinho'>
-            <h1>Aonde?</h1>
-            <h2>O Achados e Perdidos mais requisitado do Brasil.</h2>
-            <p>Agora ficou mais fácil encontrar o que você perdeu.</p>
-            <p>Torne-se um facilitador da rede integrada que todos os dias entrega itens perdidos a seus donos. #AondeTemSeuLugar</p>
-            <div class='botao'>
-                <a href='/login'>Quero logar</a>
+    <header>
+        <h1>De onde <span>estiver</span> para <span>aonde</span> você precisar.</h1>
+        <div>
+            <a href="/login">ENTRAR</a>
+            <a href="/cadastro">CRIE SUA CONTA</a>
+        </div>
+        <img src="../static/images/hand.png" alt="Imagem de uma mão segurando um celular com a tela do aplicativo">
+    </header>
+    <section>
+        <div>
+            <h1>Você já viu <span>quantas pessoas</span> já perderam algo? <span>:(</span></h1>
+        </div>
+        <div class="cards">
+            <div>
+                <h1>Porcentagem</h1>
+                <p>Mais de <span>75% das pessoas</span> que transitam por lugares públicos já perderam algum objeto. </p>
+            </div>
+            <div>
+                <h1>Lugares</h1>
+                <p>Entre eles estão os <span>transportes públicos</span>, shoppings, instituições de ensino, parques e etc</p>
+            </div>
+            <div>
+                <h1>Desistência</h1>
+                <p>Das pessoas que perdem, muitas delas nem <span>entram em contato</span> com o Achados e Perdidos.</p>
             </div>
         </div>
-        <div class='caixa'>
-            <img src="../static/images/logo_transparent.png" alt="Aonde?" height=500 width=500>
+    </section>
+    <article>
+        <div>
+            <h1>E como o <span>Aonde</span> funciona?</h1>
         </div>
-    </div>
-    <div class='praticidade'>
-        <div class='bloco'>
-            <p>Mais de 75% das pessoas que transitam por lugares públicos já perderam algum objeto. </p>
-            <p>Das pessoas que perdem, muitas delas nem entram em contato com o Achados e Perdidos.</p>
-            <p>Com a nossa parceria, abraçamos facilitadores e sistema de delivery, deixando o <b>Aonde</b> muito mais fácil (e até mesmo mais <i>inovador</i>) para encontrar o que você perdeu. ;)</p>
+        <div>
+            <h1>O <span>primeiro passo</span> é sempre o mais difícil</h1>
+            <p>Primeiramente é necessário que efetuar o seu cadastro no site! Você pode se <b>inscrever com o facebook</b> e evitar ter que preencher aquele formulário que também <b>odiamos</b>.</p>
         </div>
-    </div>
-    <div class='patrocinadores'>
-        <h2>Nossos patrocinadores</h2>
-        <div class=patrocinam>
-            <img src="../static/images/meeeettro-sp.png" alt="Metrô de São Paulo" height=75 width=300>
-            <img src="../static/images/mastertech.png" alt="Mastertech" height=100 width=400>
+        <div>
+            <h1><span>Praticidade</span> e comprometimento</h1>
+            <p>Após isso é só você registrar o item e em até 48 horas iremos entrar em contato com os resultados. Fácil, né?</p>
         </div>
-    </div>
-    <div class='pontos'>
-        <div class='um'>
-            <h2>Ganhe cupons!</h2>
-            <p>A partir do momento em que você se torna um facilitador do Aonde, seu esforço será retribuído em cupons de delivery! <i>Como assim?</i> <b>É fácil!</b> Encontrando um item, você ganha um cupom de delivery do Aonde. Caso, numa próxima vez, você quem tenha perdido... A entrega do seu item encontrado fica por nossa conta. #AondeTemFidelidade</p>
-        </div>
-        <div class='dois'>
-            <img src="../static/images/scooter.png" alt="scooter" height=300 width=300>
+    </article>
+    <div id="patrocinadores">
+        <h1>Nossos Patrocinadores</h1>
+        <div>
+            <img src="../static/images/mastertech.png" alt="Logo da mastertech">
+            <img src="../static/images/metro.png" alt="Logo do metrô">
+            <img src="../static/images/EH.png" alt="Logo da Estação Hack">
         </div>
     </div>
     <footer>
-        <h3>Encontre-nos</h3>
-        <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>LinkedIn</li>
-        </ul>
-        <div class='final'>
-            <a href="/cadastro">CADASTRE-SE</a>
-            <a href="/login">LOGIN</a>
+        <div>
+            <img src="../static/images/logoBranco.png" alt="">
+            <h1>AONDE</h1>
         </div>
-        <div class='disponivel'>
-            <h3>Faça o download do App Aonde.</h3>
-            <div class='imagens'>
-                <img src="../static/images/app-store.png" alt="App Store" width=150 height=45>
-                <img src="../static/images/google-play.png" alt="Google Play" width=150 height=45>
-            </div>
+        <h1>Redes sociais</h1>
+        <div>
+            <img src="../static/images/facebook.svg" alt="">
+            <img src="../static/images/instagram.svg" alt="">
+            <img src="../static/images/linkedin.svg" alt="">
+            <img src="../static/images/youtube.svg" alt="">
+            <img src="../static/images/twitter.svg" alt="">
+        </div>
+        <div>
+            <img src="../static/images/google.svg" alt="">
+            <img src="../static/images/apple.svg" alt="">
         </div>
     </footer>
-    
 </body>
 {% endblock %}
