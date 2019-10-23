@@ -7,7 +7,7 @@
 
 <div>
 	<form action="" method="POST">
-	{% csrf_token %}
+		{% csrf_token %}
 			<h1>Preencha como você achou o item. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
 			<label for="imagem">Se preferir, coloque uma foto do item!</label>
 			<div id="btnImagem">
@@ -16,7 +16,7 @@
 			</div>
 			<textarea  name='descricaoAchou' placeholder='Descreva aqui o item achado, lembrando que quanto mais detalhes melhor!' cols="30" rows="2"></textarea>
 			<input name="localAchou" placeholder="Onde foi que você achou?">
-			<label>Data quando achou item</label>
+			<label>Data quando achou o item</label>
 			<input type="date" name="dataAchou">
 			<textarea  name='tagsAchou' placeholder='Descreva o item achado utilizando tags. Exemplo: #livro #harrypotter #novo' cols="30" rows="2"></textarea>
 			<input type="submit" value="ENVIAR">
