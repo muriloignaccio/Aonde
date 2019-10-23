@@ -1,35 +1,26 @@
 {% extends 'base.html' %} 
 {% load static %}
 
-{% block css %}
-href="{% static 'css/perdi.css' %}"
-{% endblock %}
+{% block css %} href="{% static 'css/perdi.css' %}" {% endblock %}
 
 {% block content %}
+
 <div>
     <form action="" method="POST">
             {% csrf_token %}
-            
             <h1>Descreva o item que você perdeu. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
             <label for="imagem">Se preferir, coloque uma foto do item perdido!</label>
             <div id="btnImagem">
                     <input id="botao" type="file" name="imagem">
                     <label for="botao">Selecione um arquivo</label>
             </div>
-            <label>Descreva como você perdeu o item. Exemplo: Perdi meu livro do Harry Potter no metrô da linha vermelha, dia 24 de outubro, à tarde. Quanto mais específico, melhor!</label>
-            <textarea name='descricaoPerdeu' placeholder='Descreva aqui...' cols="30" rows="10"></textarea>
-            <label>Local:</label>
-            <input name="localPerdeu" placeholder="Local em que foi perdido...">
-            <label>Data:</label>
+            <textarea name='descricaoPerdeu' placeholder='Descreva aqui o item perdido, lembrando que quanto mais detalhes melhor!' cols="30" rows="2"></textarea>
+            <input name="localPerdeu" placeholder="Onde foi que você perdeu?">
+            <label>Data quando perdeu o item</label>
             <input type="date" name="dataPerdeu">
-            <label>Descreva, usando tags, o item perdido. Exemplo: #livro #harrypotter #novo </label>
-            <input type="text" name='tagsPerdeu' placeholder='Descreva aqui...'>
-            <input type="submit" value="Enviar">
+            <textarea  name='tagsAchou' placeholder='Descreva o item perdido utilizando tags. Exemplo: #livro #harrypotter #novo' cols="30" rows="2"></textarea>
+            <input type="submit" value="ENVIAR">
     </form>
 </div>
-<p>
-        <h2>Obrigado!</h2>
-        <h3>Em até 72h, entraremos em contato via e-mail para alertar sobre o que encontramos em nosso inventário. Fique tranquilo! ;)</h3>
-</p>
 
 {% endblock %}
