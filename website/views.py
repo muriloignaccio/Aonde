@@ -21,7 +21,6 @@ def login(request):
                 }
                 return render(request, 'login.html', args)
         else:
-            print('ci')
             args = {
                 'msg': 'Usuário não encontrado'
             }
@@ -47,34 +46,60 @@ def cadastro(request):
     return render(request, 'cadastro.html')
 
 def aonde(request):
-    return render(request, 'aonde.html')
-
+    nome_usuario = Pessoa.objects.get(nome = request.session['nome'])
+    if nome_usuario is not None:
+        return render(request, 'aonde.html')
+    else:
+        args = {
+            'msg': 'Você precisa logar primeiro'
+        }
+        return render(request, 'login.html', args)
 def perdi (request):
     nome_usuario = Pessoa.objects.get(nome = request.session['nome'])
-    if request.method == 'POST':
-        item_perdido = Item_perdido()
-        item_perdido.pessoa = nome_usuario
-        item_perdido.descricao = request.POST['descricaoPerdeu']
-        item_perdido.imagem = request.FILES['imagemPerdida']
-        item_perdido.local = request.POST['localPerdeu']
-        item_perdido.data = request.POST['dataPerdeu']
-        item_perdido.tags = request.POST['tagsPerdeu']
-        item_perdido.save()
+    if nome_usuario is not None:
+        if request.method == 'POST':
+            item_perdido = Item_perdido()
+            item_perdido.pessoa = nome_usuario
+            item_perdido.descricao = request.POST['descricaoPerdeu']
+            item_perdido.imagem = request.FILES['imagemPerdida']
+            item_perdido.local = request.POST['localPerdeu']
+            item_perdido.data = request.POST['dataPerdeu']
+            item_perdido.tags = request.POST['tagsPerdeu']
+            item_perdido.save()
 
-        return render (request, 'perdi.html')
-    return render(request, 'perdi.html')
+            args = {
+                'pessoa': nome_usuario
+            }
+
+            return render (request, 'perdi.html', args)
+        return render(request, 'perdi.html')
+    else:
+        args = {
+            'msg': 'Você precisa logar primeiro'
+        }
+        return render(request, 'login.html', args)
 
 def achei (request):
     nome_usuario = Pessoa.objects.get(nome = request.session['nome'])
-    if request.method == 'POST':
-        item_achado = Item_achado()
-        item_achado.pessoa = nome_usuario
-        item_achado.descricao = request.POST['descricaoAchou']
-        item_achado.imagem = request.FILES['imagemAchado']
-        item_achado.local = request.POST['localAchou']
-        item_achado.data = request.POST['dataAchou']
-        item_achado.tags = request.POST['tagsAchou']
-        item_achado.save()
+    if nome_usuario is not None:
+        if request.method == 'POST':
+            item_achado = Item_achado()
+            item_achado.pessoa = nome_usuario
+            item_achado.descricao = request.POST['descricaoAchou']
+            item_achado.imagem = request.FILES['imagemAchado']
+            item_achado.local = request.POST['localAchou']
+            item_achado.data = request.POST['dataAchou']
+            item_achado.tags = request.POST['tagsAchou']
+            item_achado.save()
 
-        return render (request, 'achei.html')
-    return render(request, 'achei.html')
+            args = {
+                'pessoa': nome_usuario
+            }
+
+            return render(request, 'achei.html', args)
+        return render(request, 'achei.html')
+    else:
+        args = {
+            'msg': 'Você precisa logar primeiro'
+        }
+        return render(request, 'login.html', args)
