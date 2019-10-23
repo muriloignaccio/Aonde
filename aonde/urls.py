@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from website import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,5 @@ urlpatterns = [
     path('cadastro/', views.cadastro),
     path ('aonde', views.aonde),
     path ('perdi', views.perdi),
-    path ('achei', views.achei)
-]
+    path ('achei', views.achei),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
