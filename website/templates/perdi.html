@@ -2,11 +2,12 @@
 {% load static %}
 
 {% block css %} href="{% static 'css/perdi.css' %}" {% endblock %}
+{% block js %} src="{% static 'js/script.js' %}"{% endblock%}
 
 {% block content %}
 
 <div>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="" onsubmit="return false" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <h1>Descreva o item que você perdeu. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
             <label for="imagem">Se preferir, coloque uma foto do item perdido!</label>
@@ -21,6 +22,10 @@
             <textarea  name='tagsPerdeu' placeholder='Descreva o item perdido utilizando tags. Exemplo: #livro #harrypotter #novo' cols="30" rows="2"></textarea>
             <input type="submit" value="ENVIAR">
     </form>
+    <div>
+        <h1>Agradecemos <span>muuuuuuito</span> pela sua ajuda! <span>:)</span></h1>
+        <p>Iremos olhar em nosso banco de dados se alguém achou o item segundo a sua descrição e em até 48 horas entraremos em contato com você, <span>Obrigado {{pessoa}}!</span></p>
+</div>
 </div>
 
 {% endblock %}

@@ -86,6 +86,24 @@ input[type="submit"]{
 span{
     color: #FFC045;
 }
+div > div{
+    display: none;
+}
+div > div > h1{
+    font-size: 22pt;
+}
+div > div > p{
+    margin: 5vh 5vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+.desaparecer{
+    display: none;
+}
+.aparecer{
+    display: block;
+}
 @media(min-width: 768px){
     body > div{
         width: 50vw;
