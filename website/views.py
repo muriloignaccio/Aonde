@@ -55,7 +55,7 @@ def perdi (request):
         item_perdido = Item_perdido()
         item_perdido.pessoa = nome_usuario
         item_perdido.descricao = request.POST['descricaoPerdeu']
-        item_perdido.imagem = request.POST['imagemPerdida']
+        item_perdido.imagem = request.FILES['imagemPerdida']
         item_perdido.local = request.POST['localPerdeu']
         item_perdido.data = request.POST['dataPerdeu']
         item_perdido.tags = request.POST['tagsPerdeu']
@@ -70,7 +70,7 @@ def achei (request):
         item_achado = Item_achado()
         item_achado.pessoa = nome_usuario
         item_achado.descricao = request.POST['descricaoAchou']
-        item_achado.imagem = request.POST['imagemAchado']
+        item_achado.imagem = request.FILES['imagemAchado']
         item_achado.local = request.POST['localAchou']
         item_achado.data = request.POST['dataAchou']
         item_achado.tags = request.POST['tagsAchou']
