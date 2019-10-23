@@ -6,7 +6,7 @@
 {% block content %}
 
 <div>
-	<form action="" method="POST">
+	<form action="" method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 			<h1>Preencha como você achou o item. Quanto mais <span>detalhado</span> melhor! <span>:)</span></h1>
 			<label for="imagem">Se preferir, coloque uma foto do item!</label>
