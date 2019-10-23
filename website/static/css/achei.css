@@ -1,5 +1,6 @@
 body{
     align-items: center;
+    background-attachment: fixed;
     background-image: url("../images/backgroundPhone.png");
     background-size: contain; 
     display: flex;
@@ -25,6 +26,7 @@ form > input{
     height: 7vh;
     font-family: 'Oswald', sans-serif;
     font-size: 12pt;
+    letter-spacing: 1px;
     margin: 1vh 0;
 }
 form > label{
@@ -41,6 +43,7 @@ form > label:nth-child(7){
 }
 form > textarea{
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
     margin: 1vh 0;
 }
 form > textarea:nth-child(5){
@@ -87,6 +90,14 @@ span{
     body > div{
         width: 50vw;
     }
+    #btnImagem > label{
+        transition: .2s ease-in-out;
+    }
+    #btnImagem > label:hover{
+        background-color: #28004e;
+        color: #FFC045;
+        transition: .2s ease-in-out;
+    }
     h1{
         margin: 6vh 0;
     }
@@ -101,5 +112,14 @@ span{
     }
     form > label:nth-child(7){
         width: 30vw;
+    }
+    input[type="submit"]{
+        cursor: pointer;
+        transition: .2s ease-in-out;
+    }
+    input[type="submit"]:hover{
+        background-color: #28004e;
+        color: #FFC045;
+        transition: .2s ease-in-out;
     }
 }
