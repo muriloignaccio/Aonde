@@ -219,3 +219,89 @@ section{
 section > div > h1{
     text-align: center;
 }
+@media(min-width: 768px){
+    article{
+        display: flex;
+        flex-direction: row;
+    }
+    article > div:first-child > h1{
+        margin: 7vh 5vw;
+    }
+    article div{
+        width: 33.33%;
+    }
+    article div > h1{
+        margin-top: 7vh;
+    }
+    article p{
+        margin: 5vh 5vw 10vh 5vw;
+    }
+    div > a:first-child{
+        transition: .2s ease-in-out;
+        width: 20vw;    
+    }
+    div > a:first-child:hover{
+        background-color: #28004e;
+        border: solid 1px #FFC045;
+        transition: .2s ease-in-out;
+    }
+    div > a:nth-child(2){
+        width: 20vw;
+        transition: .2s ease-in-out;
+    }
+    div > a:nth-child(2):hover{
+        background-color: #FFC045;
+        transition: .2s ease-in-out;
+    }
+    header > img{
+        height: 60vh;
+    }
+    .cards{
+        width: 80vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    .cards > div{
+        transition: .3s ease-in-out;
+        width: 20vw;
+    }
+    .cards > div:hover{
+        transform: translateY(10%);
+        transition: .3s ease-in-out;
+    }
+    .cards > div > p{
+        margin: 0 2vw;
+    }
+    #patrocinadores{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #patrocinadores img{
+        margin-bottom: 10vh;
+        transition: .5s ease-in-out;
+    }
+    #patrocinadores img:hover{
+        transform: rotateY(360deg);
+        transition: .5s ease-in-out;
+    }
+    #patrocinadores div{
+        width: 60vw;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > div:nth-child(3){
+        width: 30vw;
+    }
+    footer > div:nth-child(3) > img{
+        height: 7vh;
+    }
+    footer > div:nth-child(4) > img{
+        height:8vh;
+        margin: 0 1vw;
+    }
+}
