@@ -1,1 +1,1 @@
-web: gunicorn pastaprincipaldaaplicacao.wsgi --log-file -
+web: gunicorn aonde.wsgi --log-file -
